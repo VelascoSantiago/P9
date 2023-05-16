@@ -1,0 +1,25 @@
+import math
+
+def mean(datos):
+    avg = sum(datos)/len(datos)
+    return avg
+
+def stdev(datos, mean):
+    n = len(datos)
+    if n < 2:
+        return 0.0
+    varianza = sum((x - mean) ** 2 for x in datos) / (n - 1)
+    desviacion_estandar = math.sqrt(varianza)
+    return desviacion_estandar
+
+def main():
+
+    nums = [ 5, 6.6, 10, 7.8, 9.4, 8.5, 7.3, 9.3, 9.8, 7.5]
+    print (nums)
+    promedio = mean(nums)
+    print ("El promedio es: ", promedio)
+    desviacion = stdev(nums, promedio)
+    print ("La desviación estándar es: ", desviacion)
+
+if __name__ == '__main__':
+    main()
