@@ -4,7 +4,7 @@ def mean(datos):
     avg = sum(datos)/len(datos)
     return avg
 
-def stdev(datos, mean):
+def stdv(datos, mean):
     n = len(datos)
     if n < 2:
         return 0.0
@@ -18,7 +18,7 @@ def main():
     print (nums)
     promedio = mean(nums)
     print ("El promedio es: ", promedio)
-    desviacion = stdev(nums, promedio)
+    desviacion = stdv(nums, promedio)
     print ("La desviación estándar es: ", desviacion)
 
 if __name__ == '__main__':
