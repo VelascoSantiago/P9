@@ -1,3 +1,4 @@
+#se importa math para sqrt
 import math
 
 def mean(datos):
